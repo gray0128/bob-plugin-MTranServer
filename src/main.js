@@ -40,13 +40,17 @@ function translate(query, completion) {
         text: query.text
     };
     
+    const header = {
+        "Content-Type": "application/json"
+    };
+    if (token) {
+        header["Authorization"] = token;
+    }
+
     // 发送请求
     $http.post({
         url: url,
-        header: {
-            "Content-Type": "application/json",
-            "Authorization": token ? token : undefined
-        },
+        header: header,
         body: params,
         handler: function(resp) {
             if (resp.error) {
@@ -88,7 +92,7 @@ function translate(query, completion) {
                 result: {
                     from: query.detectFrom,
                     to: query.detectTo,
-                    toParagraphs: [data.result]
+                    toParagraphs: data.result.split('\n')
                 }
             });
         }

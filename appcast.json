@@ -1,6 +1,13 @@
 {
   "versions": [
     {
+      "version": "1.2.0",
+      "desc": "MTranServer Bob插件 v1.2.0 发布\n- 修复鉴权头潜在的 undefined 问题，提高反代服务器兼容性\n- 优化多段落长文本的翻译结果换行显示",
+      "sha256": "",
+      "url": "https://github.com/xxnuo/bob-plugin-MTranServer/releases/download/v1.2.0/MTranServer-1.2.0.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "1.1.0",
       "desc": "MTranServer Bob插件 v1.1.0 发布",
       "sha256": "",
