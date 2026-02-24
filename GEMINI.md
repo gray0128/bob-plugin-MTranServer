@@ -17,6 +17,9 @@
   - `main.js`: 插件逻辑入口，实现 `translate`、`supportLanguages` 和 `pluginValidate` 等接口。
   - `lang.js`: 语言映射逻辑，将 Bob 的语言代码转换为 MTranServer 识别的代码。
   - `icon.png`: 插件在 Bob 界面中显示的图标。
+- `appcast.json`: 插件的自动更新配置文件，包含各版本的下载链接与更新日志。
+- `create_release.sh`: 自动化打包与发布脚本，可一键压缩插件并使用 GitHub CLI 创建 Release。
+- `RELEASE_NOTES.md`: 项目版本发布说明记录。
 - `README.md`: 项目使用说明及安装指南。
 
 ## 开发与调试规范
@@ -40,8 +43,9 @@
 
 ## 构建与发布
 
-- **打包**: 将 `src` 目录下的内容压缩为 `.zip` 格式，并更名为 `.bobplugin`。
-- **安装**: 双击生成的 `.bobplugin` 文件，Bob 会自动完成安装或更新。
+- **打包与发布**: 运行 `./create_release.sh` 脚本可自动化完成 `src` 目录的压缩打包（生成 `.bobplugin` 文件），并借助 GitHub CLI (gh) 自动在 GitHub 上创建 Release。
+- **自动更新**: 发布新版本前，需确保同步更新 `appcast.json` 文件以支持 Bob 客户端内的插件自动更新 (OTA) 机制。
+- **安装**: 双击生成的 `.bobplugin` 文件，Bob 客户端会自动完成安装或更新。
 
 ## 未来任务与建议
 
