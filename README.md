@@ -15,7 +15,7 @@
 ## 安装方法
 
 1. 确保您已安装 [Bob](https://bobtranslate.com/) (版本 >= 0.5.0)
-2. 下载此插件: [mtranserver-translate.bobplugin](https://github.com/gray0128/bob-plugin-MTranServer/releases/download/1.0.0/mtranserver-translate.bobplugin)
+2. 下载此插件: [[mtranserver-translate.bobplugin](https://github.com/gray0128/bob-plugin-MTranServer/releases/download/v1.2.0/MTranServer-1.2.0.bobplugin)
 3. 双击下载的 `.bobplugin` 文件，Bob 会自动安装
 
 ## 配置说明
